@@ -1,7 +1,7 @@
 # SpaceOps-ISS-Tracker
-DS2002 Final Project- Automatic ISS Tracker
+DS2002 Final Project - Automatic ISS Tracker
 
-One-sentence description of what it does—two sentences at most. If you have screenshots of your project running or of its output, put them here.
+A ETL pipeline that automatically fetches the current ISS position from a public API, transforms the data, and stores it in a database on AWS, building a time series dataset that grows without manual intervention. 
 
 ## Installation/Building
 Show the actual commands someone must run to build the project, including fetching dependencies. Use fenced code blocks (triple backticks) so commands appear in monospace.
