@@ -1,0 +1,22 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::587821826102:role/iss-tracker-dev",
+      "role_name": "iss-tracker-dev"
+    },
+    {
+      "name": "fetch_iss",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-east-1:587821826102:function:iss-tracker-dev-fetch_iss"
+    },
+    {
+      "name": "fetch_iss-event",
+      "resource_type": "cloudwatch_event",
+      "rule_name": "iss-tracker-dev-fetch_iss-event"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
