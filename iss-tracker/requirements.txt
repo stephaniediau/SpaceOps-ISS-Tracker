@@ -1,1 +1,3 @@
+chalice
 requests
+mysql-connector-python
