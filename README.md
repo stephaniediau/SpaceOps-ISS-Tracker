@@ -48,7 +48,6 @@ pip install -r iss-tracker/requirements.txt
 cd iss-tracker
 chalice deploy
 ```
-Show the actual commands someone must run to build the project, including fetching dependencies. Use fenced code blocks (triple backticks) so commands appear in monospace.
 
 ## Usage
 ### Running pipeline locally
