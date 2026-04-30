@@ -32,12 +32,39 @@ SpaceOps-ISS-Tracker Repo Folder Outline
 
 ## Installation/Building
 ```
-commands
+# clone the repository
+git clone https://github.com/stephaniediau/SpaceOps-ISS-Tracker.git
+cd SpaceOps-ISS-Tracker
+
+# create & activate virtual environment
+python3 -m venv venv
+source venv/bin/activate        # Mac/Linux
+venv\Scripts\activate           # Windows
+
+# install dependencies
+pip install -r iss-tracker/requirements.txt
+
+# deploy pipeline to AWS Lambda
+cd iss-tracker
+chalice deploy
 ```
 Show the actual commands someone must run to build the project, including fetching dependencies. Use fenced code blocks (triple backticks) so commands appear in monospace.
 
 ## Usage
-If it is a command-line app, list the available invocations (for example, git revert, git commit). If it is a web app, list the URLs.
+### Running pipeline locally
+```
+cd iss-tracker
+chalice local
+```
+
+### Querying database
+```
+# run query script
+python3 -i query/spaceops_query.py
+```
+
 
 ## Notes
-This is where you talk about design ideas: algorithms, papers you have read, goals, and TODO items.
+- This project follows standard ETL (Extract, Transform, Load) pipeline structure
+- This project uses AWS Chalice and has a scheduled rate limit of one minute, but note that there are other options besides Chalice that can support potentially faster rates. For example, AWS EC2 with cron jobs or containerized services such as AWS Docker.
+- Potential future improvements include deploying an API that can run queries against the database.
