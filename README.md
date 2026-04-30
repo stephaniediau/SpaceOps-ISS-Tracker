@@ -25,9 +25,7 @@ SpaceOps-ISS-Tracker Repo Folder Outline
 │   
 ├── LICENSE
 │   
-├── README.md
-│   
-└── spaceops_query.py
+└── README.md
 ```
 
 ## Installation/Building
