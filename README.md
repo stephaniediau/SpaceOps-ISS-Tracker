@@ -7,11 +7,12 @@ A ETL pipeline that automatically fetches the current ISS position from a public
 ```
 SpaceOps-ISS-Tracker Repo Folder Outline
 │
-├── data folder (tba)
-│   └── tba
+├── data
+│   └── example_fetch.json
 │
 ├── iss-tracker
 │   ├── __pycache__
+│   │   └── app.cpython-311.pyc
 │   ├── .chalice
 │   │   ├── deployed
 │   │   └── config.json
@@ -71,5 +72,5 @@ python3 -i query/spaceops_query.py
 
 ## Notes
 - This project follows standard ETL (Extract, Transform, Load) pipeline structure
-- This project uses AWS Chalice and has a scheduled rate limit of one minute, but note that there are other options besides Chalice that can support potentially faster rates. For example, AWS EC2 with cron jobs or containerized services such as AWS Docker.
+- This project uses AWS Chalice and uses a scheduled rate limit of one minute, but note that there are other options besides Chalice that can support potentially faster rates. For example, AWS EC2 with cron jobs or containerized services such as AWS Docker.
 - Potential future improvements include deploying an API that can run queries against the database.

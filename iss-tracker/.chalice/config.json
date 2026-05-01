@@ -3,7 +3,12 @@
   "app_name": "iss-tracker",
   "stages": {
     "dev": {
-      "api_gateway_stage": "api"
+      "api_gateway_stage": "api",
+      "environment_variables": {
+        "DBHOST": "ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com",
+        "DBUSER": "spaceops",
+        "DBPASS": "spaceops"
+      }
     }
   }
 }
