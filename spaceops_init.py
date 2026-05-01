@@ -30,6 +30,3 @@ cursor.execute("""
 
 db.commit()
 print("Tables created successfully")
-
-cursor.close()
-db.close()
