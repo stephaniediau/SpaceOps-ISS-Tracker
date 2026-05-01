@@ -1,5 +1,14 @@
+#!/usr/bin/env python3
+
+import os
 import mysql.connector
-db = mysql.connector.connect(host='ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com', user='eby2ch', password='eby2ch', database='spaceops_tracking')
+
+DBHOST = os.environ.get('DBHOST', 'ds2002.cgls84scuy1e.us-east-1.rds.amazonaws.com')
+DBUSER = os.environ.get('DBUSER')
+DBPASS = os.environ.get('DBPASS')
+DB     = 'spaceops_tracking'
+
+db = mysql.connector.connect(host=DBHOST, user=DBUSER, password=DBPASS, database=DB)
 cursor = db.cursor()
 
 cursor.execute("""
@@ -21,3 +30,6 @@ cursor.execute("""
 
 db.commit()
 print("Tables created successfully")
+
+cursor.close()
+db.close()
