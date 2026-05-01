@@ -13,6 +13,8 @@ SpaceOps-ISS-Tracker Repo Folder Outline
 ├── iss-tracker
 │   ├── __pycache__
 │   ├── .chalice
+│   │   ├── deployed
+│   │   └── config.json
 │   ├── .gitignore
 │   ├── app.py
 │   └── requirements.txt
@@ -25,7 +27,9 @@ SpaceOps-ISS-Tracker Repo Folder Outline
 │   
 ├── LICENSE
 │   
-└── README.md
+├── README.md
+│ 
+└── spaceops_init.py
 ```
 
 ## Installation/Building
@@ -42,12 +46,16 @@ venv\Scripts\activate           # Windows
 # install dependencies
 pip install -r iss-tracker/requirements.txt
 
-# deploy pipeline to AWS Lambda
+
+```
+
+## Usage
+### Deployment to AWS Lambda
+```
 cd iss-tracker
 chalice deploy
 ```
 
-## Usage
 ### Running pipeline locally
 ```
 cd iss-tracker
